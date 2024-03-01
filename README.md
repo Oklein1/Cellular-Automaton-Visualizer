@@ -16,12 +16,10 @@ To learn more about Cellular Automaton and the rules generating over 200 distinc
 - Real-time rendering on an HTML canvas for dynamic feedback.
 - Intuitive controls for ease of use and exploration.
 
-## Usage
+## How to Use:
 
-To use the "Cellular Automaton Visualizer," simply open the `index.html` file in a web browser. Enter a rule number in the input field and click the "Update Rule" button to visualize the corresponding cellular automaton pattern. The animation will start automatically and display the evolving pattern on the canvas.
+To use the "Cellular Automaton Visualizer," simply open the `index.html` file in a web browser. Enter a rule number between 0 and 255 in the input field, then click the "Update Rule" button to visualize the corresponding cellular automaton pattern. The animation will start automatically and display the evolving pattern on the canvas.
 
 
-
-This project was created by [Your Name].
 
 
