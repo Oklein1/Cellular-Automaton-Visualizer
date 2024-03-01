@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < cols; i++) {
             cells[i] = 0;
         }
-        cells[Math.floor(cols / 2)] = 1;
+        cells[cells.length / 2] = 1;
         return cells;
     }
 
@@ -111,10 +111,15 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateRule(event) {
         event.preventDefault(); // Prevent the default form submission behavior
         ruleNumber = parseInt(document.getElementById("ruleNumberInput").value);
-        counter = 0; // Reset counter to start animation loop from the beginning
-        y = 0; // Reset y position
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before rerendering
-        animationLoop(); // Rerun animation loop with the new rule
+        if (ruleNumber < -1 || ruleNumber > 255){ // Prevent user from going over or under the designated number
+            alert("The number has to be between 0 and 255.")
+        } else{
+            counter = 0; // Reset counter to start animation loop from the beginning
+            y = 0; // Reset y position
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before rerendering
+            animationLoop(); // Rerun animation loop with the new rule
+        }
+
     }
 
 
